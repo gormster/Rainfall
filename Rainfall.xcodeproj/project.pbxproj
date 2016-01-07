@@ -10,6 +10,8 @@
 		0BEF54F11C3CDF41003C37F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF54F01C3CDF41003C37F6 /* AppDelegate.swift */; };
 		0BEF54F31C3CDF41003C37F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BEF54F21C3CDF41003C37F6 /* Assets.xcassets */; };
 		0BEF54F61C3CDF41003C37F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BEF54F41C3CDF41003C37F6 /* MainMenu.xib */; };
+		0BEF54FE1C3CDF9C003C37F6 /* RainfallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF54FD1C3CDF9C003C37F6 /* RainfallView.swift */; };
+		0BEF55031C3CE7D7003C37F6 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEF55021C3CE7D7003C37F6 /* CSV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		0BEF54F21C3CDF41003C37F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BEF54F51C3CDF41003C37F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0BEF54F71C3CDF41003C37F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BEF54FD1C3CDF9C003C37F6 /* RainfallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainfallView.swift; sourceTree = "<group>"; };
+		0BEF55021C3CE7D7003C37F6 /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +54,12 @@
 		0BEF54EF1C3CDF41003C37F6 /* Rainfall */ = {
 			isa = PBXGroup;
 			children = (
+				0BEF55021C3CE7D7003C37F6 /* CSV.swift */,
 				0BEF54F01C3CDF41003C37F6 /* AppDelegate.swift */,
 				0BEF54F21C3CDF41003C37F6 /* Assets.xcassets */,
 				0BEF54F41C3CDF41003C37F6 /* MainMenu.xib */,
 				0BEF54F71C3CDF41003C37F6 /* Info.plist */,
+				0BEF54FD1C3CDF9C003C37F6 /* RainfallView.swift */,
 			);
 			path = Rainfall;
 			sourceTree = "<group>";
@@ -90,6 +96,11 @@
 				TargetAttributes = {
 					0BEF54EC1C3CDF41003C37F6 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -129,6 +140,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BEF54F11C3CDF41003C37F6 /* AppDelegate.swift in Sources */,
+				0BEF54FE1C3CDF9C003C37F6 /* RainfallView.swift in Sources */,
+				0BEF55031C3CE7D7003C37F6 /* CSV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

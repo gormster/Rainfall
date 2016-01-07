@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6233" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6233"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -11,8 +12,9 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Rainfall" customModuleProvider="target">
             <connections>
+                <outlet property="rainfallView" destination="gPf-Lh-j0v" id="Shk-RO-KJw"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -612,6 +614,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="View" id="HyV-fh-RgO">
                         <items>
+                            <menuItem title="Animate" keyEquivalent="'" id="cJ8-Ga-98Q">
+                                <connections>
+                                    <action selector="animate:" target="Voe-Tx-rLC" id="TZy-5S-avO"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
@@ -666,15 +673,27 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Rainfall" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="Rainfall" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="contentRect" x="335" y="390" width="778" height="583"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="778" height="583"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="gPf-Lh-j0v" customClass="RainfallView" customModule="Rainfall" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="778" height="583"/>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gPf-Lh-j0v" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="DIs-iy-YXI"/>
+                    <constraint firstAttribute="bottom" secondItem="gPf-Lh-j0v" secondAttribute="bottom" id="VZK-Jp-hv8"/>
+                    <constraint firstItem="gPf-Lh-j0v" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="iyH-fC-ggX"/>
+                    <constraint firstAttribute="trailing" secondItem="gPf-Lh-j0v" secondAttribute="trailing" id="qW1-pk-C1k"/>
+                </constraints>
             </view>
+            <point key="canvasLocation" x="1019" y="721.5"/>
         </window>
     </objects>
 </document>
